@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 
+ relative
+ absolute
+ fixed
+ static
+ sticky
+
+
+.main{
+    width: 300px;
+    height: 300px;
+    position: relative;
+    background-color: brown;
+}
+
+.demo{
+    width: 100px;
+    height: 100px;
+    background-color: burlywood;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+
+.image-box{
+    position: relative;
+    width: 50%;
+}
+
+.image-box img{
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.img-text{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    background-image: linear-gradient(to bottom,#fdeff9,#ec38bc,#7303c0,#03001e);
+    transition: .3s;
+}
+
+.image-box:hover .overlay {
+}
+
+*/
+
+.text{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.text:hover::before{
+    width: 100px;
+}
+
+.text::before{
+    transition: 1s;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: chocolate;
+}
+
+#first{
+    width: 40%;
+    height: 300px;
+    background-color: crimson;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#first::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 10px;
+    background-color: cyan;
+    transition: .4s;
+}
+
+#first::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0%;
+    transition: .4s;
+    height: 10px;
+    background-color: darkgoldenrod;
+}
+
+#first:hover::before,#first:hover::after{
+    width: 50%;
+}
+
+a{
+    border: 2px solid red;
+    color: black;
+    padding: 15px 50px;
+    position: relative;
+    transition: .4s;
+    z-index: 111111111111111111111111111111;
+}
+
+a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: red;
+}
+
+a:hover::before{
+    width: 100%;
+}
+
+a:hover{
+    color: #fff;
+}
+
+
+.image-box{
+    position: relative;
+    width: 50%;
+}
+
+.image-box img{
+    width: 100%;
+    vertical-align: bottom;
+    filter: grayscale(1) blur(5px);
+    transition: .4s;
+}
+
+.image-box:hover img{
+    filter: grayscale(0) blur(0) brightness(2);
+}
+
+.img-text{
+    position: absolute;
+    bottom: 30px;
+    left: -100%;
+    transition: 1s;
+}
